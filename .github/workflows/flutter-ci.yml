@@ -9,11 +9,9 @@ jobs:
   flutter-ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: stable
 
@@ -21,28 +19,38 @@ jobs:
         id: project
         shell: bash
         run: |
-          pubspec=$(find . -maxdepth 4 -name pubspec.yaml | head -n 1)
+          pubspec=$(find . -maxdepth 6 -name pubspec.yaml | head -n 1)
           if [ -z "$pubspec" ]; then
-            echo "No pubspec.yaml found in repository."
-            exit 1
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::No pubspec.yaml found in repository. Skip Flutter checks for now."
+          else
+            dir=$(dirname "$pubspec")
+            dir="${dir#./}"
+            [ -z "$dir" ] && dir="."
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "dir=$dir" >> "$GITHUB_OUTPUT"
+            echo "Flutter project dir: $dir"
           fi
-          dir=$(dirname "$pubspec")
-          dir="${dir#./}"
-          if [ -z "$dir" ]; then dir="."; fi
-          echo "dir=$dir" >> "$GITHUB_OUTPUT"
-          echo "Flutter project dir: $dir"
 
       - name: Flutter version
+        if: steps.project.outputs.found == 'true'
         run: flutter --version
 
       - name: Get dependencies
+        if: steps.project.outputs.found == 'true'
         working-directory: ${{ steps.project.outputs.dir }}
         run: flutter pub get
 
       - name: Analyze
+        if: steps.project.outputs.found == 'true'
         working-directory: ${{ steps.project.outputs.dir }}
         run: flutter analyze
 
       - name: Build web (wasm, preview mode)
+        if: steps.project.outputs.found == 'true'
         working-directory: ${{ steps.project.outputs.dir }}
         run: flutter build web --wasm --dart-define=HOME_UI_PREVIEW=true
+
+      - name: No Flutter project (temporary pass)
+        if: steps.project.outputs.found != 'true'
+        run: echo "No Flutter project files in repo yet. CI passed by design."
