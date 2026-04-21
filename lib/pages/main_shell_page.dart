@@ -5,6 +5,7 @@ import '../models/user_profile.dart';
 import '../ui/app_tokens.dart';
 import '../ui/components/app_scaffold.dart';
 import '../ui/components/section_card.dart';
+import 'recipes_page.dart';
 import 'today_menu_page.dart';
 
 class MainShellPage extends StatefulWidget {
@@ -38,7 +39,7 @@ class _MainShellPageState extends State<MainShellPage> {
             embedded: true,
             controller: _todayMenuController,
           ),
-          _PlaceholderTab(label: context.l10n.mainShellRecipesTabPlaceholder),
+          const RecipesPage(),
           _PlaceholderTab(label: context.l10n.mainShellFavoritesTabPlaceholder),
           _PlaceholderTab(label: context.l10n.mainShellMineTabPlaceholder),
         ],

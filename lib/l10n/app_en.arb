@@ -35,6 +35,27 @@
   "mainShellLogoutTooltip": "Log Out",
   "mainShellMineTabPlaceholder": "Profile tab coming soon",
   "mainShellRecipesTabPlaceholder": "Recipes tab coming soon",
+  "recipesSearchLabel": "Search Recipes",
+  "recipesSearchHint": "Name, cuisine, or taste",
+  "recipesFilterAll": "All",
+  "recipesCount": "{count} recipes",
+  "@recipesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesEmpty": "No recipes match your filters.",
+  "recipesClearFilters": "Clear Filters",
+  "recipesLoadFailed": "Couldn't load recipes: {error}",
+  "@recipesLoadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "onboardingAdd": "Add",
   "onboardingCityLabel": "City *",
   "onboardingCityRequired": "Please select a city",

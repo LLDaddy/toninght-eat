@@ -95,6 +95,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mainShellRecipesTabPlaceholder => 'Recipes tab coming soon';
 
   @override
+  String get recipesSearchLabel => 'Search Recipes';
+
+  @override
+  String get recipesSearchHint => 'Name, cuisine, or taste';
+
+  @override
+  String get recipesFilterAll => 'All';
+
+  @override
+  String recipesCount(int count) {
+    return '$count recipes';
+  }
+
+  @override
+  String get recipesEmpty => 'No recipes match your filters.';
+
+  @override
+  String get recipesClearFilters => 'Clear Filters';
+
+  @override
+  String recipesLoadFailed(String error) {
+    return 'Couldn\'t load recipes: $error';
+  }
+
+  @override
   String get onboardingAdd => 'Add';
 
   @override

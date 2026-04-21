@@ -35,6 +35,27 @@
   "mainShellLogoutTooltip": "退出登录",
   "mainShellMineTabPlaceholder": "我的页骨架已就位",
   "mainShellRecipesTabPlaceholder": "菜谱页骨架已就位",
+  "recipesSearchLabel": "搜索菜谱",
+  "recipesSearchHint": "按菜名、菜系或口味搜索",
+  "recipesFilterAll": "全部",
+  "recipesCount": "共 {count} 道菜",
+  "@recipesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesEmpty": "没有匹配当前筛选条件的菜谱",
+  "recipesClearFilters": "清空筛选",
+  "recipesLoadFailed": "加载菜谱失败: {error}",
+  "@recipesLoadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "onboardingAdd": "添加",
   "onboardingCityLabel": "市 *",
   "onboardingCityRequired": "请选择城市",

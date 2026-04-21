@@ -95,6 +95,31 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mainShellRecipesTabPlaceholder => '菜谱页骨架已就位';
 
   @override
+  String get recipesSearchLabel => '搜索菜谱';
+
+  @override
+  String get recipesSearchHint => '按菜名、菜系或口味搜索';
+
+  @override
+  String get recipesFilterAll => '全部';
+
+  @override
+  String recipesCount(int count) {
+    return '共 $count 道菜';
+  }
+
+  @override
+  String get recipesEmpty => '没有匹配当前筛选条件的菜谱';
+
+  @override
+  String get recipesClearFilters => '清空筛选';
+
+  @override
+  String recipesLoadFailed(String error) {
+    return '加载菜谱失败: $error';
+  }
+
+  @override
   String get onboardingAdd => '添加';
 
   @override

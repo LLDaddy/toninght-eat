@@ -263,6 +263,48 @@ abstract class AppLocalizations {
   /// **'Recipes tab coming soon'**
   String get mainShellRecipesTabPlaceholder;
 
+  /// No description provided for @recipesSearchLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Search Recipes'**
+  String get recipesSearchLabel;
+
+  /// No description provided for @recipesSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Name, cuisine, or taste'**
+  String get recipesSearchHint;
+
+  /// No description provided for @recipesFilterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get recipesFilterAll;
+
+  /// No description provided for @recipesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} recipes'**
+  String recipesCount(int count);
+
+  /// No description provided for @recipesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No recipes match your filters.'**
+  String get recipesEmpty;
+
+  /// No description provided for @recipesClearFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Filters'**
+  String get recipesClearFilters;
+
+  /// No description provided for @recipesLoadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t load recipes: {error}'**
+  String recipesLoadFailed(String error);
+
   /// No description provided for @onboardingAdd.
   ///
   /// In en, this message translates to:
