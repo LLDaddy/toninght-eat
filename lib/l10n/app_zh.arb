@@ -1,0 +1,249 @@
+{
+  "@@locale": "zh",
+  "appTitle": "今晚吃什么",
+  "commonDish": "菜",
+  "commonFavorites": "收藏",
+  "commonHome": "首页",
+  "commonLock": "锁定",
+  "commonLocked": "已锁定",
+  "commonMine": "我的",
+  "commonRecipes": "菜谱",
+  "commonRegenerate": "重新生成",
+  "commonReplaceThis": "替换这道",
+  "commonRetry": "重试",
+  "commonSoup": "汤",
+  "commonUnselected": "未选择",
+  "homePhase1Done": "Phase 1完成",
+  "loginInstruction": "请输入手机号获取验证码",
+  "loginOtpSent": "验证码已发送",
+  "loginPhoneHint": "如 13800138000 或 +8613800138000",
+  "loginPhoneInvalid": "手机号格式不正确",
+  "loginPhoneLabel": "手机号",
+  "loginPhoneRequired": "请输入手机号",
+  "loginSendFailed": "发送失败: {error}",
+  "@loginSendFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "loginSendOtp": "发送验证码",
+  "loginSending": "发送中...",
+  "loginTitle": "手机号登录",
+  "mainShellFavoritesTabPlaceholder": "收藏页骨架已就位",
+  "mainShellLogoutTooltip": "退出登录",
+  "mainShellMineTabPlaceholder": "我的页骨架已就位",
+  "mainShellRecipesTabPlaceholder": "菜谱页骨架已就位",
+  "onboardingAdd": "添加",
+  "onboardingCityLabel": "市 *",
+  "onboardingCityRequired": "请选择城市",
+  "onboardingDislikedHint": "输入后点击添加，如 香菜",
+  "onboardingDislikedLabel": "忌口（可多选/输入）",
+  "onboardingFamilySizeLabel": "家庭成员数 *",
+  "onboardingFamilySizeRangeInvalid": "请输入 1-20 的数字",
+  "onboardingFamilySizeRequired": "请输入家庭成员数",
+  "onboardingMenuPatternLabel": "菜单结构 *",
+  "onboardingMenuPatternRequired": "请选择菜单结构",
+  "onboardingPreferredCuisinesLabel": "偏好菜系（可多选）",
+  "onboardingProvinceLabel": "省 *",
+  "onboardingProvinceRequired": "请选择省份",
+  "onboardingRequiredFieldsIncomplete": "请完成所有必填项",
+  "onboardingSave": "保存配置",
+  "onboardingSaveFailed": "保存失败: {error}",
+  "@onboardingSaveFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingSaveSuccess": "配置保存成功",
+  "onboardingSaving": "保存中...",
+  "onboardingSectionDisliked": "忌口设置",
+  "onboardingSectionMenuPattern": "菜单结构",
+  "onboardingSectionPreferences": "偏好设置",
+  "onboardingSectionRegionFamily": "地区与家庭",
+  "onboardingSessionExpired": "登录状态失效，请重新登录",
+  "onboardingTastePreferencesLabel": "口味偏好 *",
+  "onboardingTitle": "首次配置",
+  "otpCodeInvalid": "请输入6位数字",
+  "otpCodeLabel": "6位验证码",
+  "otpCodeRequired": "请输入验证码",
+  "otpLoginSuccess": "登录成功",
+  "otpSentTo": "验证码已发送到 {phone}",
+  "@otpSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "otpTitle": "输入验证码",
+  "otpVerifyAndLogin": "验证并登录",
+  "otpVerifyFailed": "验证码错误或已过期: {error}",
+  "@otpVerifyFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "otpVerifying": "验证中...",
+  "recipeDetailAddTodayMenuButton": "加入今日菜单",
+  "recipeDetailAddTodayMenuPlaceholder": "加入今日菜单占位，后续接入",
+  "recipeDetailFavoriteButton": "收藏",
+  "recipeDetailFavoritePlaceholder": "收藏功能占位，后续接入",
+  "recipeDetailIngredientBullet": "· {ingredient}",
+  "@recipeDetailIngredientBullet": {
+    "placeholders": {
+      "ingredient": {
+        "type": "String"
+      }
+    }
+  },
+  "recipeDetailIngredientsTitle": "食材清单",
+  "recipeDetailStepsTitle": "做法步骤",
+  "recipeDetailSummary": "类型: {type} · 菜系: {cuisine} · 耗时: {minutes}分钟",
+  "@recipeDetailSummary": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "recipeDetailTitle": "菜谱详情",
+  "startupMissingEnv": "未找到 .env，请先按 .env.example 配置",
+  "startupMissingSupabaseKeys": "缺少 SUPABASE_URL 或 SUPABASE_ANON_KEY",
+  "tarotDrawFailed": "抽取失败: {error}",
+  "@tarotDrawFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "tarotDrawTodayMenuButton": "抽取今日菜单",
+  "tarotDrawingButton": "抽取中...",
+  "tarotDrawingHint": "正在洗牌与揭示...",
+  "tarotPhaseDrawing": "抽取中",
+  "tarotPhaseIdle": "未抽取",
+  "tarotPhaseResult": "已揭示",
+  "tarotReadyHint": "准备好后开始抽卡，揭示今日菜单",
+  "tarotRedraw": "重新抽取",
+  "tarotResultLine": "{name} · {type} · {minutes}分钟",
+  "@tarotResultLine": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "type": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "tarotResultTitle": "抽取结果",
+  "tarotTitle": "今日吃什么？",
+  "tarotUseThisMenu": "使用这份菜单",
+  "todayCuisineAndMinutes": "{cuisine} · {minutes}分钟",
+  "@todayCuisineAndMinutes": {
+    "placeholders": {
+      "cuisine": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "todayCurrentStrategyLabel": "当前推荐策略: {strategy}",
+  "@todayCurrentStrategyLabel": {
+    "placeholders": {
+      "strategy": {
+        "type": "String"
+      }
+    }
+  },
+  "todayDrawTodayMenu": "抽取今日菜单",
+  "todayLocalCuisineLabel": "本地菜系: {cuisine}",
+  "@todayLocalCuisineLabel": {
+    "placeholders": {
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "todayLockedCannotReplace": "已锁定，无法替换",
+  "todayLogoutFailed": "退出失败: {error}",
+  "@todayLogoutFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "todayMenuGenerateFailed": "菜单生成失败: {error}",
+  "@todayMenuGenerateFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNoReplacementCandidates": "暂无可替换候选",
+  "todayPatternDefault": "3菜1汤",
+  "todayPreferredCuisineLabel": "偏好菜系: {cuisines}",
+  "@todayPreferredCuisineLabel": {
+    "placeholders": {
+      "cuisines": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPreviewCannotLogout": "预览模式不可退出",
+  "todayReasonBasicMatch": "基础匹配",
+  "todayReasonLocalCuisine": "命中本地菜系",
+  "todayReasonPreferredCuisine": "命中偏好菜系",
+  "todayReasonSameCity": "同市",
+  "todayReasonSameProvince": "同省",
+  "todayReasonSeason": "命中当季",
+  "todayReasonTaste": "命中口味",
+  "todayReplaceFailed": "替换失败: {error}",
+  "@todayReplaceFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "todayReplacedOneDish": "已替换一道菜",
+  "todaySeasonAndPattern": "当季: {season} · 结构: {dishCount}菜{soupCount}汤",
+  "@todaySeasonAndPattern": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      },
+      "dishCount": {
+        "type": "int"
+      },
+      "soupCount": {
+        "type": "int"
+      }
+    }
+  },
+  "todaySeasonAutumn": "秋",
+  "todaySeasonSpring": "春",
+  "todaySeasonSummer": "夏",
+  "todaySeasonWinter": "冬",
+  "todayStrategyPreferenceLocalWeight": "偏好优先+本地加权",
+  "todayTitle": "今日吃什么？"
+}
