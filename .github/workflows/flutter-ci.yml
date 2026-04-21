@@ -17,14 +17,32 @@ jobs:
         with:
           channel: stable
 
+      - name: Detect Flutter project dir
+        id: project
+        shell: bash
+        run: |
+          pubspec=$(find . -maxdepth 4 -name pubspec.yaml | head -n 1)
+          if [ -z "$pubspec" ]; then
+            echo "No pubspec.yaml found in repository."
+            exit 1
+          fi
+          dir=$(dirname "$pubspec")
+          dir="${dir#./}"
+          if [ -z "$dir" ]; then dir="."; fi
+          echo "dir=$dir" >> "$GITHUB_OUTPUT"
+          echo "Flutter project dir: $dir"
+
       - name: Flutter version
         run: flutter --version
 
       - name: Get dependencies
+        working-directory: ${{ steps.project.outputs.dir }}
         run: flutter pub get
 
       - name: Analyze
+        working-directory: ${{ steps.project.outputs.dir }}
         run: flutter analyze
 
       - name: Build web (wasm, preview mode)
+        working-directory: ${{ steps.project.outputs.dir }}
         run: flutter build web --wasm --dart-define=HOME_UI_PREVIEW=true
