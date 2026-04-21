@@ -1,0 +1,30 @@
+name: flutter-ci
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+jobs:
+  flutter-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Build web (wasm, preview mode)
+        run: flutter build web --wasm --dart-define=HOME_UI_PREVIEW=true
