@@ -1,0 +1,27 @@
+﻿# Dart/Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+/build/
+build/
+
+# Generated / platform ephemeral
+ios/Flutter/ephemeral/
+ios/Pods/
+windows/flutter/ephemeral/
+android/.gradle/
+android/local.properties
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# Secrets
+.env
+.env.local

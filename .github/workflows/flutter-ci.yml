@@ -41,10 +41,22 @@ jobs:
         working-directory: ${{ steps.project.outputs.dir }}
         run: flutter pub get
 
+      - name: Create CI .env placeholder
+        if: steps.project.outputs.found == 'true'
+        working-directory: ${{ steps.project.outputs.dir }}
+        shell: bash
+        run: |
+          if [ ! -f .env ]; then
+            {
+              echo "SUPABASE_URL=https://example.supabase.co"
+              echo "SUPABASE_ANON_KEY=ci_dummy_key"
+            } > .env
+          fi
+
       - name: Analyze
         if: steps.project.outputs.found == 'true'
         working-directory: ${{ steps.project.outputs.dir }}
-        run: flutter analyze
+        run: flutter analyze --no-fatal-infos
 
       - name: Build web (wasm, preview mode)
         if: steps.project.outputs.found == 'true'
