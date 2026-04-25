@@ -67,3 +67,23 @@ Exit code:
 
 - `0`: no lint errors (warnings may exist)
 - `1`: one or more lint errors
+
+## 6) pages copy gate (Phase 6Q/6S)
+
+Scan `lib/pages/**/*.dart` for hardcoded CJK UI strings:
+
+```powershell
+python scripts/recipes_page_l10n_gate.py
+```
+
+Run fixture self-test:
+
+```powershell
+python scripts/recipes_page_l10n_gate.py --self-test
+```
+
+CI workflow:
+
+- `.github/workflows/recipes-page-l10n-gate.yml`
+- `pages-l10n-self-test` runs `python scripts/recipes_page_l10n_gate.py --self-test`
+- `pages-l10n-gate` runs `python scripts/recipes_page_l10n_gate.py`
