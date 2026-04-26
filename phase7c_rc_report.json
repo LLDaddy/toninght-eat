@@ -1,0 +1,28 @@
+﻿{
+    "generatedAt":  "2026-04-26T21:21:24",
+    "workspace":  "D:\\caipu\\toninght-eat-sync",
+    "commitHash":  "9211937",
+    "version":  "0.1.1-rc.1+2",
+    "conclusion":  "可发布",
+    "artifacts":  [
+                      {
+                          "type":  "apk",
+                          "path":  "D:\\caipu\\toninght-eat-sync\\build\\app\\outputs\\flutter-apk\\app-release.apk",
+                          "bytes":  55408542,
+                          "sha256":  "CF4AAA5A02E6D6B955675356237DE37072EE111CD0BA9654B119ED8616AA7D5A"
+                      },
+                      {
+                          "type":  "aab",
+                          "path":  "D:\\caipu\\toninght-eat-sync\\build\\app\\outputs\\bundle\\release\\app-release.aab",
+                          "bytes":  46088124,
+                          "sha256":  "4ADAC055E428E3B49FDE1D9354119AFE14115CB98FF09C9C6BF7B2E678BDD9F7"
+                      }
+                  ],
+    "knownIssues":  [
+                        "flutter doctor reports non-blocking PATH warning for Flutter binary",
+                        "flutter doctor network resources check times out to maven.google.com in current network",
+                        "flutter analyze has 6 existing info-level deprecation warnings"
+                    ],
+    "rollbackGuide":  "docs/rollback_rc.md",
+    "changelog":  "CHANGELOG.md"
+}
