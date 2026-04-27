@@ -25,3 +25,5 @@ android/local.properties
 # Secrets
 .env
 .env.local
+android/key.properties
+android/*.jks
